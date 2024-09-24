@@ -41,7 +41,7 @@ class Player {
 
     public void rollDice() { // rolls dice, dice is of Die type so it has .roll() method.
         dice.roll();
-        System.out.println("You roll the dice and get: " + getDieValue());
+        System.out.println("You roll the dice!");
     }
 
     public int getDieValue(){ //returns value of dice roll
@@ -59,22 +59,32 @@ class Player {
 
 class DiceGame { // main game 
 
-    public static void main(String[] args) {
+    public static String slowPrint(String s) throws InterruptedException { //print strings slowly
+        char[] chars = s.toCharArray();
+
+        for (int i = 0; i < chars.length; i++) {
+            System.out.print(chars[i]);
+            Thread.sleep(30);
+        }
+        return s;
+    }
+
+    public static void main(String[] args) throws InterruptedException {
 
         Scanner sc = new Scanner(System.in);
         int maxRounds, rounds = 0; // declare variables for max rounds and round counter.
-        System.out.println("Hello, welcome to DiceGame\nHow many rounds would you like to play? ");
+        slowPrint("Hello, welcome to DiceGame\nHow many rounds would you like to play?\n");
         maxRounds = sc.nextInt();
         sc.nextLine(); //consumes next nextline, so we can ask 
 
-        // Ask for player name, create new player object.
-        System.out.println("Enter your name: ");
+ 
+        slowPrint("Enter your name: ");
         Player player1 = new Player(sc.nextLine()); //creates player putting user input as name.
-        player1.addDie(); //creates new dice object, 
+        player1.addDie(); //creates new dice instance for player1 instance of player class.
 
         while (rounds < maxRounds) { 
             rounds++; //round started, add 1 to round counter.
-            System.out.println("Please guess a number 1-6: ");
+            slowPrint("\nPlease guess a number 1-6: ");
             int usrGuess = sc.nextInt();// player guess = scanner object
 
             player1.rollDice(); //future update, add a 2nd guess. and the program will tell you under or over.
@@ -83,12 +93,13 @@ class DiceGame { // main game
                 player1.increaseScore(); // if yes increaseScore method called.
                 System.out.println("Hurray! You guessed correctly!\nYour current score is: " + player1.getPoint());
             } else {
-                System.out.println("You guessed wrong!\nThe correct number was: " + player1.getDieValue());
+                slowPrint("You guessed wrong!\nThe correct number was: ");
+                System.out.print(player1.getDieValue());
             }
             
         }
         
-        System.out.println("Game over, Thanks for playing " + player1.getName() + "\nYour score was: " + player1.getPoint());
+        System.out.println("\nGame over, Thanks for playing " + player1.getName() + "\nYour final score is: " + player1.getPoint());
         
         sc.close();
     }
