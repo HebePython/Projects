@@ -1,4 +1,3 @@
-package Java_playground.java_test.Lab1.DiceLab;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -15,9 +14,6 @@ public class Die {
         this.currentValue = rand.nextInt(this.maxDiceValue) + 1;
     }
 
-    public int getMaxDie() { //getter of the max sides a dice can have. ((IS THIS NEEDED?))
-        return maxDiceValue;
-    }
     public int getCurrentValue() { // returns current value of dice roll when called.
         return currentValue;
     }
@@ -39,10 +35,6 @@ class Player {
 
     public int getPoint() { //getter points. returns current amount of points when called.
         return points;
-    }
-
-    public void setPoint(int points) { //setter points ((IS THIS NEEDED?))
-        this.points = points;
     }
 
     public void rollDice() { // rolls dice, dice is of Die type so it has .roll() method.
@@ -79,7 +71,7 @@ class DiceGame { // main game
         player1.addDie(); //creates new dice object, 
 
         while (rounds < maxRounds) { 
-            rounds++; //round finished, add 1 to round counter.
+            rounds++; //round started, add 1 to round counter.
             System.out.println("Please guess a number 1-6: ");
             int usrGuess = sc.nextInt();// player guess = scanner object
 
