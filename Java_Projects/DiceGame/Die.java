@@ -4,8 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Die {
-    int currentValue;
-    int maxDiceValue;
+    private int currentValue;
+    private int maxDiceValue;
     private Random rand = new Random();
 
     Die(int maxDiceValue) { // constructor.
@@ -16,16 +16,16 @@ public class Die {
         this.currentValue = rand.nextInt(this.maxDiceValue) + 1;
     }
 
-    public int getCurrentValue() { // returns current value of dice roll when called.
+    public int getCurrentValue() { // returns current value of dice when called. e.g. result of .roll()
         return currentValue;
     }
 
 }
 
 class Player {
-    String name;
-    int points = 0;
-    Die dice; // Die type, dice variable name. 
+    private String name;
+    private int points = 0;
+    private Die dice; // Die type, dice variable name. 
 
     Player(String name) { //constructor, takes only name.
         this.name = name;
