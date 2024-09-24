@@ -1,4 +1,4 @@
-package CarDashboard;
+package CarDashboard.CardashboardMain;
 
 public class Speedometer {
     private double kmh;
