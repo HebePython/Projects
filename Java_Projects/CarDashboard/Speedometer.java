@@ -6,7 +6,6 @@ public class Speedometer {
     Speedometer(double kmh) {
         this.kmh = kmh;
     }
-
     public double getKmh() {
         return kmh;
     }
