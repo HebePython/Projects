@@ -1,17 +1,19 @@
 package CarDashboard.CardashboardMain;
 
 public class CarDashboard {
-    private Fuelgauge fuel;         //litres
-    private Odometer kmTraveled;    // distance traveled in km
-    private Speedometer currentSpeed;      // km/h
+    private Fuelgauge fuel = new Fuelgauge(0);         //litres
+    private Odometer kmTraveled = new Odometer(0);    // distance traveled in km
+    private Speedometer currentSpeed = new Speedometer(0);      // km/h
     
-    CarDashboard(double fuel, double kmTraveled, double speed) {
-  //      this.fuel = fuel;
+    CarDashboard() { //remove?
+
     }
 
     public static void main(String[] args) {
         
-   //     CarDashboard temp = new CarDashboard();
+        CarDashboard temp = new CarDashboard();
+
+        System.out.println(temp.currentSpeed.getKmh());
         
 
     }
