@@ -1,4 +1,4 @@
-package CarDashboard.CardashboardMain;
+package com.yourpackage;
 
 public class Odometer {
     private double kmTraveled;

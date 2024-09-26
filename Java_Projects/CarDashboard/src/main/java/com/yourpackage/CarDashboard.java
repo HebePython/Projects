@@ -1,4 +1,4 @@
-package CarDashboard.CardashboardMain;
+package com.yourpackage;
 
 public class CarDashboard {
     private Fuelgauge fuel = new Fuelgauge(0);         //litres
