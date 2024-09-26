@@ -1,16 +1,20 @@
 package com.yourpackage;
 
 public class Speedometer {
-    private double kmh;
+    private double currentSpeed;
 
-    Speedometer(double kmh) {
-        this.kmh = kmh;
+    Speedometer() {
+        this.currentSpeed = 0;
     }
-    public double getKmh() {
-        return kmh;
+    public double getcurrentSpeed() {
+        return currentSpeed;
     }
-    public void setKmh(double kmh) {
-        this.kmh = kmh;
+    public void increaseSpeed(int amount) {
+        this.currentSpeed += amount;
     }
+    public void descreaseSpeed(int amount) {
+        this.currentSpeed -= Math.max(0, this.currentSpeed - amount);
+    }
+
     
 }

@@ -1,16 +1,17 @@
 package com.yourpackage;
 
 public class Fuelgauge {
-    private double fuel;
+    private double fuelLevel;
     
-    Fuelgauge(double fuel) {
-        this.fuel = fuel;
+    Fuelgauge() {
+        this.fuel = 50;
     }
-    public double getFuel() {
-        return fuel;
+    public double getFuelLevel() {
+        return fuelLevel;
     }
-    public void setFuel(double fuel) {
-        this.fuel = fuel;
+    public void consumeFuel(double distanceTraveled) {
+        double fuelConsumed = distanceTraveled * 0.1;
+        this.fuelLevel = Math.max(0, this.fuelLevel - fuelConsumed);
     }
 
 }

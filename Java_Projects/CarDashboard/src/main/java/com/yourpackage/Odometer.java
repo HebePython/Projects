@@ -1,15 +1,15 @@
 package com.yourpackage;
 
 public class Odometer {
-    private double kmTraveled;
+    private double distanceTraveled;
     
-    Odometer(double disTraveled) {
-        this.kmTraveled = disTraveled;
+    Odometer() {
+        this.distanceTraveled = 0;
     }
-    public double getKmTraveled() {
-        return kmTraveled;
+    public double getdistanceTraveled() {
+        return distanceTraveled;
     }
-    public void setKmTraveled(double kmTraveled) {
-        this.kmTraveled = kmTraveled;
+    public void updateDistance(double amount) {
+        this.distanceTraveled += amount;
     }
 }
