@@ -1,0 +1,5 @@
+com\yourpackage\Main.class
+com\yourpackage\Dashboard.class
+com\yourpackage\Fuelgauge.class
+com\yourpackage\Odometer.class
+com\yourpackage\Speedometer.class

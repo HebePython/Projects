@@ -6,6 +6,6 @@ public class Main {
         
         dashboard.updateDashboard(60, 5.0); //incr speed 60 and travel 5km.
 
-
+        System.out.println("MAIN WORKS");
     }
 }
