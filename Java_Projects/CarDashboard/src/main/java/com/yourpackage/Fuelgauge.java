@@ -11,7 +11,7 @@ public class Fuelgauge {
     }
     public void consumeFuel(double distanceTraveled) {
         double fuelConsumed = distanceTraveled * 0.1;
-        this.fuelLevel = Math.max(0, this.fuelLevel - fuelConsumed);
+        this.fuelLevel = Math.max(0.0, this.fuelLevel - fuelConsumed);
     }
 
 }

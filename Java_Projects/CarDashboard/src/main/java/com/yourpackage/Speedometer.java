@@ -9,11 +9,11 @@ public class Speedometer {
     public double getcurrentSpeed() {
         return currentSpeed;
     }
-    public void increaseSpeed(int amount) {
+    public void increaseSpeed(double amount) {
         this.currentSpeed += amount;
     }
-    public void descreaseSpeed(int amount) {
-        this.currentSpeed -= Math.max(0, this.currentSpeed - amount);
+    public void descreaseSpeed(double amount) {
+        this.currentSpeed -= Math.max(0.0, this.currentSpeed - amount);
     }
 
     

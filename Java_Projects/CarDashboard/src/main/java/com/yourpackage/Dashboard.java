@@ -12,11 +12,13 @@ public class Dashboard {
     }
 
     public void updateDashboard(double increaseSpeed, double distanceTraveled) {
-  //     System.out.printf("\nCurrent Speed: %d\nDistance traveled: %.02f", speedometer.getcurrentSpeed(), distanceTraveled.getdistanceTraveled());
-        System.out.println("speed: " + speedometer.getcurrentSpeed() + "distance: " + distanceTraveled.getdistanceTraveled);
+        speedometer.increaseSpeed(increaseSpeed);
+        odometer.updateDistance(distanceTraveled);
+  
     }
 
     public void displayDashboard() {
         System.out.println("DASHBOARD WORKS");
+        
     }
 }

@@ -4,7 +4,7 @@ public class Odometer {
     private double distanceTraveled;
     
     Odometer() {
-        this.distanceTraveled = 0;
+        this.distanceTraveled = 0.0;
     }
     public double getdistanceTraveled() {
         return distanceTraveled;
