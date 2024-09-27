@@ -4,7 +4,7 @@ public class Speedometer {
     private double currentSpeed;
 
     Speedometer() {
-        this.currentSpeed = 0;
+        this.currentSpeed = 0.0;
     }
     public double getcurrentSpeed() {
         return currentSpeed;

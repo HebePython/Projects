@@ -4,7 +4,7 @@ public class Fuelgauge {
     private double fuelLevel;
     
     Fuelgauge() {
-        this.fuelLevel = 50;
+        this.fuelLevel = 50.0;
     }
     public double getFuelLevel() {
         return fuelLevel;
