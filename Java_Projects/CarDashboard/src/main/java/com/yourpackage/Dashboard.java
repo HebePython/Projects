@@ -11,14 +11,16 @@ public class Dashboard {
         odometer = new Odometer();
     }
 
-    public void updateDashboard(double increaseSpeed, double distanceTraveled) {
-        speedometer.increaseSpeed(increaseSpeed);
+    public void updateDashboard(double speed, double distanceTraveled) { //updates dashboard with info when called.
+        speedometer.increaseSpeed(speed);
         odometer.updateDistance(distanceTraveled);
-  
+        fuelgauge.consumeFuel(distanceTraveled);
+ 
     }
 
     public void displayDashboard() {
-        System.out.println("DASHBOARD WORKS");
+        System.out.println("Speed: " + speedometer.getcurrentSpeed() +" km/h    Distance: " + odometer.getdistanceTraveled() + " km    Fuel: " + fuelgauge.getFuelLevel() + " liters");
+
         
     }
 }

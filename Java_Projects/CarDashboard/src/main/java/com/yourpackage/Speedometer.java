@@ -13,7 +13,7 @@ public class Speedometer {
         this.currentSpeed += amount;
     }
     public void descreaseSpeed(double amount) {
-        this.currentSpeed -= Math.max(0.0, this.currentSpeed - amount);
+        this.currentSpeed = Math.max(0.0, this.currentSpeed - amount);
     }
 
     
